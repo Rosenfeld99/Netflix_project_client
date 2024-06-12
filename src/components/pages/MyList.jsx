@@ -16,7 +16,7 @@ const MyList = () => {
   return (
     <div className=" min-h-screen ">
       <AuthUser />
-      {/*  */}
+      {/* render grid movies content */}
       <GridList
         paddingTop={"pt-20"}
         titleList={LANGUAGE == "he" ? "הרשימה שלי" : "My List"}
