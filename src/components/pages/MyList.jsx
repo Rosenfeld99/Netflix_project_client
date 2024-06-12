@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import GridList from "../components/grid/GridList";
 import AuthUser from "../auth/user/AuthUser";
 import useScreen from "../../hooks/useScreen";
-import { MDX_PROFILEID } from "../../constant/url";
+import { LANGUAGE, MDX_PROFILEID } from "../../constant/url";
 
 const MyList = () => {
   const { error, loading, singleScreen, getSingleScreen, favs_ar } = useScreen();
@@ -19,7 +19,7 @@ const MyList = () => {
       {/*  */}
       <GridList
         paddingTop={"pt-20"}
-        titleList={"הרשימה שלי"}
+        titleList={LANGUAGE == "he" ? "הרשימה שלי" : "My List"}
         renderMovies={favs_ar}
         loading={loading}
         type={"movie"}
