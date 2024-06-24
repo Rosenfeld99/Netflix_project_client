@@ -1,7 +1,8 @@
 
 # Netflix Project Frontend 
 
-This project aims to replicate the Netflix user interface, allowing users to browse and watch content in a similar fashion to the real platform. The frontend is built using React.js with Vite for a fast development environment, TailwindCSS and DaisyUI for styling, and Redux for state management. This README provides an overview of the project, setup instructions, and key details.## Demo
+This project aims to replicate the Netflix user interface, allowing users to browse and watch content in a similar fashion to the real platform. The frontend is built using React.js with Vite for a fast development environment, TailwindCSS and DaisyUI for styling, and Redux for state management. This README provides an overview of the project, setup instructions, and key details.
+## Demo
 
 ![Profile manage gif](https://res.cloudinary.com/djwetaeqt/image/upload/v1718060751/github_Images/ScreenshotGithub_x9mgeb.png)
 
