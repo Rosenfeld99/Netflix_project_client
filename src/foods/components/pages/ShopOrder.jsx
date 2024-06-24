@@ -31,7 +31,7 @@ const FoodOrder = () => {
       <div>
         <SelectAddress />
       </div>
-      <form dir={LANGUAGE == "he" ? "rtl" : "ltr"} className="mx-auto mt-6 max-w-xl sm:mt-10">
+      <form dir={"rtl"} className="mx-auto mt-6 max-w-xl sm:mt-10">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           {/* message for selers */}
           <div className="sm:col-span-2">

@@ -66,7 +66,7 @@ export default function ProductOverviews({
                 <div className="relative flex w-full items-center overflow-hidden bg-black px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
                   <button
                     type="button"
-                    className="absolute right-4 top-4 text-gray-400 hover:text-gray-500 sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8"
+                    className="absolute right-4 top-4 text-gray-400 hover:text-gray-500 md:right-3 md:top-3"
                     onClick={() => {
                       setOpen(false);
                       setIsHovered(false);
@@ -84,7 +84,7 @@ export default function ProductOverviews({
                         className="object-cover object-center"
                       />
                     </div>
-                    <div className="sm:col-span-8 lg:col-span-7">
+                    <div className="sm:col-span-8 lg:col-span-7 md:pt-5">
                       <h2 className="text-2xl text-right font-bold text-gray-300 sm:pl-12">
                         {product.name}
                       </h2>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const DetailesEndDes = ({ product }) => {
+const  DetailesEndDes = ({ product }) => {
   console.log(product);
   return (
     <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
@@ -17,7 +17,7 @@ const DetailesEndDes = ({ product }) => {
           <h3 className="text-sm font-medium text-gray-400"> סימונים</h3>
 
           <div className="mt-4">
-            <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
+            <ul role="list" className="list-disc space-y-2 pr-4 text-sm">
               {product?.highlights?.map((highlight) => (
                 <li key={highlight} className="text-gray-500">
                   <span className="text-white">{highlight}</span>

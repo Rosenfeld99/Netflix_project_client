@@ -1,16 +1,12 @@
-import { Fragment, useEffect, useState } from "react";
-import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
+import {  useEffect, useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
-import { navigation } from "./dataNav";
 import CartNav from "./components/CartNav";
 import SearchNav from "./components/SearchNav";
-import CurrencyNav from "./components/CurrencyNav";
 import AccountNav from "./components/AccountNav";
 import NavMobile from "./mobile/NavMobile";
 import NavDescktop from "./descktop/NavDescktop";
 import useShop from "../../../../hooks/useShop";
 import { Link } from "react-router-dom";
-import { LANGUAGE } from "../../../../constant/url";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -20,11 +16,11 @@ const Navigation = () => {
 
   const { categories, loading, error, fetchCategories } = useShop();
 
+  console.log(categories);
+
   useEffect(() => {
     fetchCategories();
   }, []);
-
-  // console.log(categories);
 
   return (
     <div className="bg-white fixed top-0 w-full z-50">
@@ -38,7 +34,7 @@ const Navigation = () => {
 
       <header className="relative bg-black">
         <p
-          dir={LANGUAGE == "he" ? "rtl" : "ltr"}
+          dir="rtl"
           className="flex h-10 items-center justify-center bg-red-700 px-4 text-sm font-medium text-white sm:px-6 lg:px-8"
         >
           קבל משלוח חינם בהזמנה מעל 100 ₪
@@ -87,9 +83,6 @@ const Navigation = () => {
                     "hidden sm:mr-3 sm:flex sm:flex-1 sm:items-center sm:justify-end sm:space-x-6"
                   }
                 />
-
-                {/* currency */}
-                {/* <CurrencyNav /> */}
 
                 {/* Search */}
                 <SearchNav />

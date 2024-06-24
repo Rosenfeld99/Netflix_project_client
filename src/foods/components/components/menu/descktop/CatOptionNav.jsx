@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CatOptionNav = ({ category, setOpen, open }) => {
+const CatOptionNav = ({ category, setOpen, open, close }) => {
   console.log(open);
   return (
     <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
@@ -22,7 +22,8 @@ const CatOptionNav = ({ category, setOpen, open }) => {
               <li key={i} className="flex">
                 <Link
                   onClick={() => {
-                    setOpen(false);
+                    setOpen(false)
+                    close()
                   }}
                   to={`/shop/product/${item.href}`}
                   className="text-gray-400 hover:text-gray-600"

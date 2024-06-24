@@ -11,11 +11,11 @@ const FoodPromo = () => {
       <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div dir={LANGUAGE == "he" ? "rtl" : "ltr"} className="sm:max-w-lg">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              מהיום אוכל מזמינים גם ב-
+            <h1 dir={"rtl"} className="text-3xl text-start font-bold tracking-tight text-white sm:text-6xl">
+              מהיום אוכל מזמינים ב-
               <span className=" text-red-600">Netflix</span>
             </h1>
-            <p className="mt-4 text-xl text-gray-300">
+            <p className="mt-4 text-xl text-end text-gray-300">
               עם אפליקציית המכירה החדשה שלנו, תוכלו ליהנות מחווית צפייה מדהימה
               בסרטים ותוכניות שונות, ובנוסף, לשלב זאת עם הזמנת מגוון מוצרים
               מזינים וטעימים ממסעדות איכותיות בסביבתכם.

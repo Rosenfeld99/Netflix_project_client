@@ -4,13 +4,13 @@ import { Popover, Transition } from "@headlessui/react";
 import OferColaction from "./OferColaction";
 import CatOptionNav from "./CatOptionNav";
 
-const NavDescktop = ({ navigation, open, classNames,setOpen }) => {
+const NavDescktop = ({ navigation, open, classNames, setOpen }) => {
   return (
     <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
       <div className="flex h-full space-x-8">
         {navigation?.map((category) => (
           <Popover key={category.name} className="flex">
-            {({ open }) => (
+            {({ open, close }) => (
               <>
                 {/* categories nav */}
                 <CatNav
@@ -39,10 +39,10 @@ const NavDescktop = ({ navigation, open, classNames,setOpen }) => {
                       <div className="mx-auto max-w-7xl px-8">
                         <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
                           {/* ofer colection */}
-                          <OferColaction category={category} />
+                          <OferColaction close={close} category={category} />
 
                           {/* catecories option colection */}
-                          <CatOptionNav category={category} setOpen={setOpen} open={open}/>
+                          <CatOptionNav close={close} category={category} setOpen={setOpen} open={open} />
                         </div>
                       </div>
                     </div>
@@ -52,16 +52,6 @@ const NavDescktop = ({ navigation, open, classNames,setOpen }) => {
             )}
           </Popover>
         ))}
-
-        {/* {navigation.pages.map((page) => (
-          <a
-            key={page.name}
-            href={page.href}
-            className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-          >
-            {page.name}
-          </a>
-        ))} */}
       </div>
     </Popover.Group>
   );

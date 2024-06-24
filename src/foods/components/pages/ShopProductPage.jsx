@@ -53,7 +53,7 @@ const FoodProductPage = () => {
   return (
     <div className=" max-w-6xl mx-auto">
       {/* <Cart /> */}
-      <div dir={LANGUAGE == "he" ? "rtl" : "ltr"} className="pt-6">
+      <div dir="rtl" className="pt-6">
         {/* map site */}
         <nav aria-label="Breadcrumb">
           <Nav product={singleProduct} />
@@ -78,7 +78,7 @@ const FoodProductPage = () => {
             </p>
 
             {/* Reviews */}
-            <Reviews reviews={reviews} classNames={classNames} />
+            {/* <Reviews reviews={reviews} classNames={classNames} /> */}
 
             <form className="mt-10">
               {/* Sizes */}
@@ -109,13 +109,6 @@ const FoodProductPage = () => {
         {/* product completion */}
         <ProductCompletion isHovered={isHovered} setIsHovered={setIsHovered} setOpen={setOpen}/>
       </div>
-      {/* product over quickviews */}
-      {/* <ProductOverviews
-        open={open}
-        setOpen={setOpen}
-        product={product}
-        setIsHovered={setIsHovered}
-      /> */}
     </div>
   );
 };

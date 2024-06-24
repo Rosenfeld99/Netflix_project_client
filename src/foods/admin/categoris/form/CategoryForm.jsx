@@ -41,7 +41,7 @@ const CategoryForm = ({ singleCategory }) => {
       },
     ]
   );
-  console.log(sections[0].items);
+  // console.log(sections[0].items);
 
   const onSubmit = (bodyData) => {
     bodyData.featured = featured;

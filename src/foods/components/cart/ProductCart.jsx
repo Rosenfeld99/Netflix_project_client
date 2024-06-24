@@ -37,7 +37,7 @@ const ProductCart = ({setOpen}) => {
                         <p className="ml-4">₪ {product?.price}</p>
                       </div>
                       {product?.size ? (
-                        <p className="mt-3 text-sm bg-gray-200 text-black p-2 rounded-sm h-[30px] w-[30px] flex items-center justify-center font-bold">
+                        <p className="mt-3 text-sm bg-gray-200 text-black p-2 rounded-sm h-[30px] w-fit flex items-center justify-center font-bold">
                           {product?.size}
                         </p>
                       ) : null}

@@ -1,5 +1,4 @@
 import { LANGUAGE } from "../../src/constant/url";
-import ProductCompletion from "../../src/foods/components/pages/ProductCompletion";
 
 const List = ({ titel, name, children }) => {
   return (
@@ -15,7 +14,6 @@ const List = ({ titel, name, children }) => {
           </div>
         </div>
       </div>
-      {/* <ProductCompletion  /> */}
     </>
   );
 };

@@ -7,12 +7,13 @@ const Sizes = ({classNames,selectedSize,setSelectedSize,product}) => {
     <div className="mt-10">
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-medium text-gray-100">מידה</h3>
-        <a
+        {/* Add exemple for chhose size */}
+        {/* <a
           href="#"
           className="text-sm font-medium text-gray-400 hover:text-red-600"
         >
           מדריך מידות
-        </a>
+        </a> */}
       </div>
 
       <RadioGroup
@@ -31,7 +32,7 @@ const Sizes = ({classNames,selectedSize,setSelectedSize,product}) => {
                 classNames(
                   size.inStock
                     ? "cursor-pointer bg-gray-300 text-gray-900 shadow-sm"
-                    : "cursor-not-allowed bg-gray-50 text-gray-200",
+                    : "cursor-not-allowed bg-gray-300 text-gray-500 opacity-60",
                   active ? "ring-2 ring-red-500 text-red-600" : "",
                   "group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 "
                 )
