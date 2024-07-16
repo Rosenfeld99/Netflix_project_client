@@ -12,6 +12,7 @@ This project aims to replicate the Netflix user interface, allowing users to bro
 - Features
 - Technologies Used
 - Setup Instructions
+- Docker Setup
 - State Management
 - Screen Limit
 
@@ -69,6 +70,42 @@ Build for production:
 ```bash
   npm run build
 ```
+
+Hosting for Development 
+
+Before proceeding with Docker setup, make sure the development server is running correctly:
+
+1 Start the development server:
+
+```bash
+  npm run dev
+```
+
+2 Ensure your package.json includes the following to host the development server:
+
+```bash
+  "scripts": {
+  "dev": "vite --host 0.0.0.0",
+  "build": "vite build",
+  "serve": "vite preview"
+}
+```
+
+## Docker Setup
+
+After verifying the development server runs correctly, proceed with Docker setup:
+
+1 Build Docker Image:
+
+```bash
+  docker build -t netflix_project_client:dev .
+```
+2 Run Docker Container:
+
+```bash
+  docker run -p 5173:5173 netflix_project_client:dev
+```
+This will start the development server inside a Docker container, and you can access the application at http://localhost:5173.
 
 ## State Management
 
