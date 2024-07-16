@@ -29,6 +29,8 @@ const EditProfile = ({
 
   console.log(getItem);
   const onSubmit = (bodyData) => {
+    console.log(bodyData);
+
     bodyData._id = getItem._id;
     bodyData.imageScreen = avatar;
     bodyData.lenguage = bodyData.lenguage || "en";
@@ -100,7 +102,7 @@ const EditProfile = ({
               >
                 {LANGUAGE == "he" ? "שפה :" : "Language : "}
               </label>
-              <select {...register("lenguage")} name="" className=" my-2 bg-black border px-2 py-1" id="">
+              <select {...register("lenguage")} className=" my-2 bg-black border px-2 py-1" >
                 <option value="he">עברית</option>
                 <option value="en">English</option>
                 {/* <option value="">En</option> */}
