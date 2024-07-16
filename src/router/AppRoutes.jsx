@@ -39,7 +39,7 @@ import MoviesPage from "../components/pages/MoviesPage";
 import AuthManager from "../components/auth/manager/AuthManager";
 import LoginManager from "../components/auth/manager/LoginManager";
 import MenuManager from "../components/auth/manager/MenuManager";
-import VerifiEmall from "../components/auth/user/verifiEmall";
+import VerifiEmallPage from "../components/auth/user/VerifiEmallPage.jsx";
 
 const AppRoutes = () => {
   const { user, error, loading, getUser, status } = useAuth();
@@ -73,7 +73,7 @@ const AppRoutes = () => {
           <Route index element={<Login />} />
         )}
         <Route path="/register" element={<Register />} />
-        <Route path="/verify/:token/" element={<VerifiEmall/>} />
+        <Route path="/verify/:token/" element={<VerifiEmallPage/>} />
         <Route path="/login" element={<Login />} />
       </Routes>
 

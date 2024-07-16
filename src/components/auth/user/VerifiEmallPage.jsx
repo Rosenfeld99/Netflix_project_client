@@ -4,7 +4,7 @@ import { USER_ROUTE } from "../../../constant/url";
 import { useNavigate, useParams } from "react-router-dom";
 import { apiGet } from "../../../services/services";
 
-const VerifiEmall = () => {
+const VerifiEmallPage = () => {
   const { token } = useParams();
   const [resp, setResp] = useState(null);
   const nav = useNavigate();
@@ -57,4 +57,4 @@ const VerifiEmall = () => {
   );
 };
 
-export default VerifiEmall;
+export default VerifiEmallPage;
