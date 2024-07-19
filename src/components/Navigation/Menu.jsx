@@ -35,7 +35,7 @@ export default function Menus() {
   );
   return (
     <div>
-      {!localStorage[TOKEN_KEY] && localStorage[MDX_PROFILEID] && user ? (
+      {localStorage[TOKEN_KEY] && localStorage[MDX_PROFILEID] && user ? (
         <>
           <AuthUser />
           <Disclosure
