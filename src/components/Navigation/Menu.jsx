@@ -35,7 +35,7 @@ export default function Menus() {
   );
   return (
     <div>
-      {localStorage[TOKEN_KEY] && localStorage[MDX_PROFILEID] && user ? (
+      {!localStorage[TOKEN_KEY] && localStorage[MDX_PROFILEID] && user ? (
         <>
           <AuthUser />
           <Disclosure
@@ -91,9 +91,8 @@ export default function Menus() {
       ) : (
         <>
           {localStorage[MDX_PROFILEID] && (
-            <div>
+            <div className=" h-screen w-full flex-1 flex items-center justify-center">
               <img
-                className=" h-screen w-full flex-1 flex items-center justify-center"
                 src="/Loading_Animation.gif"
                 alt=""
               />
