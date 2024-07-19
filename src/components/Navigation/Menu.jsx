@@ -91,9 +91,9 @@ export default function Menus() {
       ) : (
         <>
           {localStorage[MDX_PROFILEID] && (
-            <div className="w-[200px] absolute right-4 top-4">
+            <div className=" h-screen w-full flex-1 flex items-center justify-center">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+                src="/Loading_Animation.gif"
                 alt=""
               />
             </div>
